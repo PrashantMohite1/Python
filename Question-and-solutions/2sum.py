@@ -29,7 +29,7 @@ print(ans)
 
 
 
-Optimised way
+# Optimised way
 
 nums = [2 , 7 , 11 , 15]
 target = 9
