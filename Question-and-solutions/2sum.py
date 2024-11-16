@@ -31,24 +31,24 @@ print(ans)
 
 # Optimised way
 
-# nums = [2 , 7 , 11 , 15]
-# target = 9
+nums = [2 , 7 , 11 , 15]
+target = 9
 
-# indices = []
-# nums_length = len(nums)
-
-
-
-# print('list = ', nums)
-# print("nums length",nums_length)
+indices = []
+nums_length = len(nums)
 
 
-# # for loop for nums then we are checking weather (target-j) is present in list and is list having 2 element.if yes then add index of that list element in indicess
-# for j in nums:
-#     target_check = target - j
-#     if target_check in nums and len(indices) != 2:
-#         indices.append(nums.index(target_check))
-# print("indices = ", indices)
+
+print('list = ', nums)
+print("nums length",nums_length)
+
+
+# for loop for nums then we are checking weather (target-j) is present in list and is list having 2 element.if yes then add index of that list element in indicess
+for j in nums:
+    target_check = target - j
+    if target_check in nums and len(indices) != 2:
+        indices.append(nums.index(target_check))
+print("indices = ", indices)
 
 
 
