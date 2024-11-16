@@ -14,16 +14,16 @@ class Solution:
             
             # for loop to iterate over actual values in nums                
             for j in nums:
-                if i != nums.index(j):
-                    target_check = j + nums[i]
-                    if target_check == target :
-                        indices.append(nums.index(j))
+                
+                target_check = j + nums[i]
+                if target_check/j == 2 :
+                    target_check = 0
+                if target_check == target :
+                    indices.append(i)
         return indices
-        
-
 
 myobject = Solution()
-ans = myobject.twoSum([2 , 7 , 11 , 15],9)
+ans = myobject.twoSum([3,2,4],6)
 
 print(ans)
 
@@ -31,24 +31,24 @@ print(ans)
 
 # Optimised way
 
-nums = [2 , 7 , 11 , 15]
-target = 9
+# nums = [2 , 7 , 11 , 15]
+# target = 9
 
-indices = []
-nums_length = len(nums)
-
-
-
-print('list = ', nums)
-print("nums length",nums_length)
+# indices = []
+# nums_length = len(nums)
 
 
-# for loop for nums then we are checking weather (target-j) is present in list and is list having 2 element.if yes then add index of that list element in indicess
-for j in nums:
-    target_check = target - j
-    if target_check in nums and len(indices) != 2:
-        indices.append(nums.index(target_check))
-print("indices = ", indices)
+
+# print('list = ', nums)
+# print("nums length",nums_length)
+
+
+# # for loop for nums then we are checking weather (target-j) is present in list and is list having 2 element.if yes then add index of that list element in indicess
+# for j in nums:
+#     target_check = target - j
+#     if target_check in nums and len(indices) != 2:
+#         indices.append(nums.index(target_check))
+# print("indices = ", indices)
 
 
 
