@@ -6,30 +6,30 @@ class Solution:
         #  calculate lenght of nums
         nums_length = len(nums)        
 
-        # created blank indices in order to add two element indices which sum == target                                       
+        # blank indices in order to add two element indices which sum == target                                       
         indices = []
 
         # for loop for length of i to iterate over indices of nums
         for i in range(nums_length):  
-            
-            # for loop to iterate over actual values in nums                
-            for j in nums:
-                
+            for j in nums :
+
+            #  in short [2,7,11,15]  = here if i == num.index(j) then skip n[0] + j
+            #   i =0 n[0] = 2   check (index of 2) == 0 then here 2 + 2 sum skipped
+                if i == nums.index(j):                      
+                    continue
                 target_check = j + nums[i]
-                if target_check/j == 2 :
-                    target_check = 0
                 if target_check == target :
                     indices.append(i)
         return indices
 
 myobject = Solution()
-ans = myobject.twoSum([3,2,4],6)
+ans = myobject.twoSum([3,3],6)
 
 print(ans)
 
 
 
-# Optimised way
+Optimised way
 
 nums = [2 , 7 , 11 , 15]
 target = 9
