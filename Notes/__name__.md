@@ -5,7 +5,7 @@ Simple Explanation:
 __name__ is a string that holds the name of the current module (or script).
 If the script is being executed directly (i.e., run as the main program), __name__ will be set to '__main__'.
 If the script is being imported into another Python file as a module, __name__ will be set to the name of the script (without the .py extension).
----
+
 
 ### **Scenario 1: When the script is **run directly****
 
