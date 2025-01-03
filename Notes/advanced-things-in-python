@@ -1,0 +1,5 @@
+c = list(s)
+print ("After converting string to list : ",end="")
+print (c)
+
+end="": Normally, print() adds a newline character at the end of the printed message. The end="" argument tells Python not to add a newline after printing this message. So, the next print statement will appear on the same line.
