@@ -1,10 +1,10 @@
 
+In Python, __name__ is a special built-in variable that helps you understand how your Python script is being executed. It's commonly used to determine if a Python file is being run as a script or being imported as a module into another script.
 
-## **What is `__name__`?**
-
-- The `__name__` variable is a special built-in variable in Python.
-- It holds the **name of the current module** that is being executed or imported.
-
+Simple Explanation:
+__name__ is a string that holds the name of the current module (or script).
+If the script is being executed directly (i.e., run as the main program), __name__ will be set to '__main__'.
+If the script is being imported into another Python file as a module, __name__ will be set to the name of the script (without the .py extension).
 ---
 
 ### **Scenario 1: When the script is **run directly****
