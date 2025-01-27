@@ -2,6 +2,8 @@
 
 In Python, Strings are arrays of bytes representing Unicode characters.
 
+Strings are immutable, hence elements of a String cannot be changed once it has been assigned. Only new strings can be reassigned to the same name. 
+
 
 - String slicing - 
     ```
@@ -56,3 +58,20 @@ In Python, Strings are arrays of bytes representing Unicode characters.
     ex- "    hello   " = hello
 
     
+### Escape Characters 
+
+-   '\n' --> Leaves a line
+    '\t' --> Leaves a space
+
+
+- epr()  : This function returns a string in its printable  format, i.e doesn’t resolve the escape sequences.
+    
+    ```
+    ch = "I\nLove\tIndia"
+    print(repr(ch))
+
+    output:
+    'I\nLove\tIndia'
+
+    ```
+

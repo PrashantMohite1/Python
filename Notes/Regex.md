@@ -1,0 +1,36 @@
+# Regex - Python
+
+Regular expressions are extremely helpful in extracting useful information from loads of text. Regular expressions work on pattern-matching techniques. Extracting phone-number, validating passwords, and extracting images from web-pages are but a few examples of regex usage.
+
+#### Process of using regular expression in python
+
+- first need to import re
+-  re.compile() function to create a regular expression object. 
+- use several methods to search for and match patterns in strings. ex- match , search , findall , sub 
+
+
+#### Builtin Functions For Regex
+
+- compile :  
+    re.compile() function to create a regular expression object. 
+    re.compile() function takes a string as an argument and returns a regular expression object.
+
+
+- match(): This method searches for a match at the beginning of the string.
+- search(): This method searches for a match anywhere in the string.
+- findall(): This method returns a list of all matches in the string.
+- sub(): This method replaces all matches with a specified string.
+
+
+#### Example of Regex
+
+
+- find integers from string 
+    ```
+    import re
+    str = "asdasd123asmdasdk34234kfdsd34sdfk5"
+    pattern = re.compile('\d+')
+    output = pattern.findall(str)
+    print(output)
+    ```
+
