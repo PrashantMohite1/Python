@@ -63,6 +63,12 @@ Strings are immutable, hence elements of a String cannot be changed once it has 
 -   '\n' --> Leaves a line
     '\t' --> Leaves a space
 
+- Tripple coats '''Prashant Mohite''' : we can also use tripple coats for escape sequence but it is more easier that using \t \n \ of escape sequence. in tripple what ever convention we are giving it printed in that sense
+    ```
+    ex -:
+    print('''Prashant        Mohite''')
+    Output = Prashant       Mohite
+    ```
 
 - epr()  : This function returns a string in its printable  format, i.e doesn’t resolve the escape sequences.
     

@@ -27,10 +27,19 @@ Regular expressions are extremely helpful in extracting useful information from 
 
 - find integers from string 
     ```
-    import re
-    str = "asdasd123asmdasdk34234kfdsd34sdfk5"
-    pattern = re.compile('\d+')
-    output = pattern.findall(str)
-    print(output)
+        import re 
+
+        str1 = '''asdasd123asmdasdk34234kfdsd34sdfk5'''
+
+        def numberMatcher(str):
+            pat= r'\d+'
+            match=re.findall(pat,str) 
+            if(match): 
+                for i in match:
+                    print(i, end=" ")
+            else:
+                print(-1,end="")
+
+        numberMatcher(str1)
     ```
 
