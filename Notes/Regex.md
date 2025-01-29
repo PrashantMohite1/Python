@@ -2,6 +2,13 @@
 
 Regular expressions are extremely helpful in extracting useful information from loads of text. Regular expressions work on pattern-matching techniques. Extracting phone-number, validating passwords, and extracting images from web-pages are but a few examples of regex usage.
 
+- while using "\\" , "\d+" for regex patter we will be getting syntax error because in string that consider as a escape sequence so as a solution we can ignore escape sequence using r or R because this r string cosiderd as raw string.
+
+    ```
+    ex - 
+    pattern = r"\d+"
+    ```
+
 #### Process of using regular expression in python
 
 - first need to import re
