@@ -22,33 +22,53 @@ Explanation: No common elements.
 """
 
 
-# two pointer approach kaldlka
+# two pointer approach 
 
-arr1 = [1, 2, 3, 4,5]
-arr2 = [2, 4, 6, 7, 8]
+# arr1 = [1, 2, 3, 4,5]
+# arr2 = [2, 4, 6, 7, 8]
 
-lst1 = []
+# lst1 = []
 
-length = len(arr1)
-i = 0
-j = 0
-while i < len(arr1) and j < len(arr2):
-    # print(f"value of i = {i} and value of j = {j}")
+# length = len(arr1)
+# i = 0
+# j = 0
+# while i < len(arr1) and j < len(arr2):
+#     # print(f"value of i = {i} and value of j = {j}")
 
-    if arr1[i] == arr2[j]:
-        print(f"value of i = {i} and value of  j = {j}")
-        lst1.append(arr1[i])
+#     if arr1[i] == arr2[j]:
+#         print(f"value of i = {i} and value of  j = {j}")
+#         lst1.append(arr1[i])
 
-        i += 1
-        j +=1 
+#         i += 1
+#         j +=1 
 
         
 
-    elif arr1[i]< arr2[j]:
-        i +=1 
+#     elif arr1[i]< arr2[j]:
+#         i +=1 
 
-    elif arr1[i] > arr2[j] : 
-        j += 1
+#     elif arr1[i] > arr2[j] : 
+#         j += 1
 
 
-print("output = ",lst1)
+# print("output = ",lst1)
+
+
+
+# hash set approach
+
+
+arr1 = [1, 2, 3, 4,5,4,5]
+arr2 = [2, 4, 6, 7, 8,4,5,6,7,7,7]
+
+
+arr1 = set(arr1)
+arr2 = list(set(arr2))
+
+print(arr2)
+
+# print(set1)
+
+for i in arr2:
+    if i in arr1:
+        print(i)
