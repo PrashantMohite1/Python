@@ -308,8 +308,115 @@ def pattern13(n):
         print()
 
 
+"""
+A
+AB
+ABC
+ABCD
+ABCDE
+"""
+
+
+def pattern14(n):
+
+    for i in range(1, n+1):
+        alfabet = ord("A")
+        for j in range(i):
+            print(chr(alfabet) , end="")
+            # print(alfabet,end=" ")
+            alfabet += 1
+        print()
+
+
+"""
+ABCDE
+ABCD
+ABC
+AB
+A
+"""
+
+def pattern15(n):
+    
+    for i in range(n , 1 , -1):
+        alfabet= ord("A")
+        for j in range(i):
+            print(chr(alfabet), end="")
+            alfabet +=1 
+        print()
+        
+
+
+"""
+A
+BB
+CCC
+DDDD
+EEEEE
+"""
+
+def pattern16(n):
+    alfabet = ord("A")
+    for i in range(1, n+1):
+        for j in range(i):
+            print(chr(alfabet) , end="")
+            # print(alfabet,end=" ")
+        print()
+        alfabet += 1
+
+
+
+
+"""
+   A
+  ABA
+ ABCBA
+ABCDCBA
+"""
+
+
+def pattern17(n):
+    for i in range(n):
+        bkpoint = (2*i+1)/2
+        alphabet = ord("A")
+
+        # j = 1
+        # while j <= (2*i+1):
+        #     print(chr(alphabet), end="")
+        #     if j < bkpoint:
+        #         alphabet += 1
+        #     else:
+        #         alphabet -= 1
+        #     j +=1 
+
+        for j in range(1,(2*i+1)+1):
+            # print(chr(alphabet) , end="")
+            # alphabet += 1
+
+            # print(f"j  = {j}")
+            print(j, end="")
+
+            if j < bkpoint :
+                alphabet += 1
+            else:
+                alphabet -= 1
+        print()
+        
+
+def debugpattern(n):
+   
+    for i in range(n):
+        rangefactor = (2*i+1)+1
+        print(f"rangefactor = {rangefactor}")
+
+        for j in range(1 , rangefactor):
+            print(j , end="")
+        print()       
+            
+
 if __name__ ==  "__main__":
     n = int(input("Enter Value of N : "))  
-    pattern13(n)
+    # pattern17(n)
+    debugpattern(n)
    
     

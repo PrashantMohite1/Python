@@ -90,3 +90,148 @@ Destructors are called when an object gets destroyed. In Python, destructors are
 
 The `__del__()` method is a known as a destructor method in Python. It is called when all references to the object have been deleted i.e when an object is garbage collected.
 
+
+
+
+## Inheritance
+
+
+Inheritance is a fundamental concept in Python programming. It is primarily used to implement an is-a relationship among classes, promoting code reuse. This means that you can create a new class based on an existing class, inheriting its attributes and methods.
+
+Benefits of Inheritance :
+    The main advantage of inheritance is the ability to reuse code. This reduces redundancy and makes maintenance easier. For example, if you need to update a common feature, you only have to do it in one place instead of multiple classes.
+
+```
+class Person:
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+
+class Employee(Person):
+    def __init__(self, id, name, salary):
+        super().__init__(id, name)
+        self.salary = salary
+
+    def printDetails(self):
+        print(self.id)
+        print(self.name)
+        print(self.salary)
+
+e = Employee(101, "Rahul", 40000)
+e.printDetails()
+```
+
+
+
+
+
+
+### **Link between Access Modifiers and Encapsulation in Python**
+
+In **encapsulation**, we hide the internal details of a class and only expose the necessary parts of the object. **Access modifiers** are tools used to control the level of access to the data (attributes) and methods of a class, which is crucial for implementing encapsulation.
+
+Access modifiers allow you to decide:
+- Which parts of a class can be accessed from outside the class.
+- Which parts of a class are **protected** or **private**, meaning they can’t be modified directly.
+
+### **Types of Access Modifiers in Python**
+
+Python doesn't have strict access modifiers like some other languages (e.g., Java), but it follows naming conventions to indicate the level of access. There are three main types:
+
+1. **Public Access Modifier** (Default)
+2. **Protected Access Modifier**
+3. **Private Access Modifier**
+
+### 1. **Public Access Modifier** (Default in Python)
+By default, all attributes and methods in a Python class are **public**, meaning they can be accessed directly from outside the class.
+
+- **Public** attributes and methods can be accessed directly without any restrictions.
+
+**Example:**
+
+```python
+class Car:
+    def __init__(self, model, color):
+        self.model = model  # public attribute
+        self.color = color  # public attribute
+
+    def display_info(self):  # public method
+        print(f"Model: {self.model}, Color: {self.color}")
+
+# Create an object of the Car class
+car1 = Car("Toyota", "Red")
+
+# Accessing public attributes directly
+print(car1.model)  # Output: Toyota
+print(car1.color)  # Output: Red
+
+# Accessing public method
+car1.display_info()  # Output: Model: Toyota, Color: Red
+```
+
+### 2. **Protected Access Modifier**
+In Python, attributes or methods that start with a **single underscore** (`_`) are considered **protected**. This is more of a convention to indicate that these attributes or methods should not be accessed directly outside the class or its subclasses. However, it is **not enforced by Python** (i.e., you can still access them if needed).
+
+- **Protected** attributes are intended to be accessed only within the class or by subclasses.
+
+**Example:**
+
+```python
+class Car:
+    def __init__(self, model, color):
+        self._model = model  # protected attribute
+        self._color = color  # protected attribute
+
+    def _display_info(self):  # protected method
+        print(f"Model: {self._model}, Color: {self._color}")
+
+# Create an object of the Car class
+car1 = Car("Honda", "Blue")
+
+# Accessing protected attributes and methods (not recommended)
+print(car1._model)  # Output: Honda
+car1._display_info()  # Output: Model: Honda, Color: Blue
+```
+
+### 3. **Private Access Modifier**
+In Python, attributes or methods that start with **double underscores** (`__`) are considered **private**. These cannot be accessed directly from outside the class. Python uses **name mangling** to make the attribute harder to access by changing its name internally.
+
+- **Private** attributes are meant to be used only inside the class.
+
+**Example:**
+
+```python
+class Car:
+    def __init__(self, model, color):
+        self.__model = model  # private attribute
+        self.__color = color  # private attribute
+
+    def __display_info(self):  # private method
+        print(f"Model: {self.__model}, Color: {self.__color}")
+
+# Create an object of the Car class
+car1 = Car("BMW", "Black")
+
+# Trying to access private attributes directly will result in an error
+# print(car1.__model)  # This will raise an AttributeError
+
+# However, you can still access the private attribute through name mangling (not recommended)
+print(car1._Car__model)  # Output: BMW
+```
+
+### **Summary of Access Modifiers:**
+
+1. **Public**: 
+   - No underscores (`self.attribute`).
+   - Can be accessed from outside the class directly.
+2. **Protected**: 
+   - Single underscore (`_self.attribute`).
+   - Meant for internal use (class or subclasses).
+3. **Private**: 
+   - Double underscores (`__self.attribute`).
+   - Cannot be accessed directly from outside the class (name mangling).
+
+### **Why are Access Modifiers Important for Encapsulation?**
+
+- **Encapsulation** is about hiding the internal state of an object and exposing only the necessary parts.
+- **Access modifiers** help to control the visibility and accessibility of an object's attributes and methods, ensuring that the internal state is protected from unwanted changes or misuse.

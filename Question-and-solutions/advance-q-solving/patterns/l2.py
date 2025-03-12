@@ -1,8 +1,20 @@
+i = chr;
 
+# Display the alphabets
+print("The Alphabets from A to Z are: ");
 
-n = 0
+# Traverse each character
+# with the help of for loop
+for i in range(ord('A'), ord('Z') + 1):
 
-if n%2 ==0 :
-    print(f"N is Even")
-else:
-    print(f"N is Odd")
+    # Print the alphabet
+    print(chr(i), end=" ");
+# Display the alphabets
+print("\nThe Alphabets from a to z are: ");
+
+# Traverse each character
+# with the help of for loop
+for i in range(ord('a'), ord('z') + 1):
+
+    # Print the alphabet
+    print(chr(i), end=" ");
