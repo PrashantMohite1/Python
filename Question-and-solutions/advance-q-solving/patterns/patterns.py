@@ -380,6 +380,10 @@ def pattern17(n):
         bkpoint = (2*i+1)/2
         alphabet = ord("A")
 
+
+        for k in range(n -(i +1)):
+            print("", end=" ")
+
         # j = 1
         # while j <= (2*i+1):
         #     print(chr(alphabet), end="")
@@ -390,11 +394,8 @@ def pattern17(n):
         #     j +=1 
 
         for j in range(1,(2*i+1)+1):
-            # print(chr(alphabet) , end="")
-            # alphabet += 1
-
-            # print(f"j  = {j}")
-            print(j, end="")
+            
+            print(chr(alphabet), end="")
 
             if j < bkpoint :
                 alphabet += 1
@@ -412,11 +413,163 @@ def debugpattern(n):
         for j in range(1 , rangefactor):
             print(j , end="")
         print()       
+
+
+ 
+# Pattern 18            
+
+"""
+E 
+D E 
+C D E 
+B C D E 
+A B C D E 
+"""
+
+
+
+def pattern18(n):
+    startp = ord("E")
+    for i in range(1,n+1):
+        endp = ord("E")+1
+        for j in range(startp,endp):
+            print(chr(j), end=" ")
+        startp -= 1
+        print()
             
+
+
+
+
+"""
+Pattern 19 
+
+* * * * * * * * * * 
+* * * *     * * * * 
+* * *         * * * 
+* *             * * 
+*                 * 
+*                 * 
+* *             * * 
+* * *         * * * 
+* * * *     * * * * 
+* * * * * * * * * * 
+
+"""
+
+
+
+def pattern19(n):
+    for i in range(n,0, -1):
+        for j in range(i):
+            print("*", end=" ")
+
+        space = (n-i) * 2
+ 
+        for j in range(space , 0 , -1):
+            print(" ", end=" ")
+
+        for k in range(i):
+            print("*", end=" ")           
+
+        print()
+
+      
+
+ 
+    for k in range (1, n+1):
+
+        for h in range(k):
+            print("*", end=" ")
+
+        space = (n - k) * 2
+
+        for i in range(space):
+            print(" ", end=" ")
+
+        
+        for j in range(k):
+            print("*", end=" ")
+
+        print()
+
+
+"""
+Pattern 20 
+
+*                 * 
+* *             * * 
+* * *         * * * 
+* * * *     * * * * 
+* * * * * * * * * * 
+* * * *     * * * * 
+* * *         * * * 
+* *             * * 
+*                 * 
+
+"""
+
+
+def pattern20(n):
+    for i in range(1,n+1):
+        for j in range(i):
+            print("*", end=" ")
+
+        space = (n-i)*2
+        for k in range(space):
+            print(" " , end=" ")
+
+        for l in range(i):
+            print("*", end=" ")
+
+        print()
+
+
+    for i in range(n-1, 0 , -1):
+        for j in range(i):
+            print("*", end=" ")
+
+        space = (n-i) * 2
+
+        for k in range(space):
+            print(" ", end=" ")
+        
+        for l in range(i):
+            print("*", end=" ")
+        
+        print()
+
+"""
+pattern 21
+
+* * * * 
+*     * 
+*     * 
+* * * * 
+
+"""
+
+def pattern21(n):
+    start = 1
+    End = n
+    space = n -2
+    for i in range(1,n+1):
+
+        if start == i or End == i:
+            for j in range(n):
+                print("*", end=" ")
+            print()
+        else:
+         print("*", end=" ")
+         for j in range(space):
+            print(" ", end=" ")
+         print("*", end=" ")
+         print()
+
 
 if __name__ ==  "__main__":
     n = int(input("Enter Value of N : "))  
-    # pattern17(n)
-    debugpattern(n)
+    pattern21(n)
+    
    
     
