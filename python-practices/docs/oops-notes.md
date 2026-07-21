@@ -8,6 +8,27 @@ entities) instead of just functions. It bundles **data** + **behavior** together
 
 ---
 
+### self in method
+
+method is the function created inside the class
+
+'self' refers to the specific object the method is called on
+
+(the object before the dot, e.g. acct1.get_balance() -> self = acct1).
+
+Without it, the method wouldn't know which object's data to use.
+
+
+- self.name = __name    --- correct    --- this means create var name attached to object and have and put __name value inside it 
+
+- __name = self.name    --- wrong      --- this is local variable this we can'nt use for method because for method if we want to perform action on object , then that var need to attach to object using (self.name)
+
+self.name means we are attaching this name value to the object of the class, so it stays with the object and can be used in other methods. If I write just __name, it means a simple local variable — it holds a reference temporarily, but it is not attached to the object, so it vanishes once the method finishes.
+
+
+
+
+
 ## Core building blocks
 
 
@@ -37,7 +58,11 @@ d.bark()           # Tommy: Woof!
 
 ---
 
+
+
 ## The 4 pillars of OOP
+
+
 
 ### 1. Encapsulation
 
@@ -58,6 +83,8 @@ class Account:
             self.__balance += amt
 ```
 
+
+
 ### 2. Inheritance
 
 **Create a new class from an existing one** to reuse its code. Child (derived) gets parent's
@@ -75,6 +102,8 @@ Dog().eat()   # inherited from Animal
 
 - Use `super()` to call the parent's version.
 - Python supports **multiple inheritance**: `class C(A, B):`.
+
+
 
 ### 3. Polymorphism
 
@@ -115,6 +144,8 @@ Circle(5).area()            # 78.5
 
 ---
 
+
+
 ## Encapsulation vs Abstraction
 
 Both involve "hiding" — but they hide **different things** for **different reasons**.
@@ -149,6 +180,8 @@ complex internals).
 
 ---
 
+
+
 ## Method types
 
 
@@ -180,6 +213,8 @@ class Circle:
 
 ---
 
+
+
 ## Quick glossary
 
 - **Instance attribute** — unique per object (`self.x`).
@@ -189,6 +224,8 @@ class Circle:
 - **Dunder methods** — special `__x__` methods Python calls automatically (see `dunder-methods.md`).
 
 ---
+
+
 
 ## One-line summary of the pillars
 
