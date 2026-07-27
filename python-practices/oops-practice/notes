@@ -1,0 +1,14 @@
+
+
+class employee:
+    name = ""
+    age = 0
+
+    def emp_details(self):
+        print(f"Name : {name}, Age : {age})
+
+
+attribute = anything you reach with a dot
+   |
+   ├── data attribute   → a variable (self.name, age...)
+   └── method           → a function (emp_details(), work()...)
