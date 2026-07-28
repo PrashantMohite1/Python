@@ -1,0 +1,42 @@
+{
+  "company": "TechCorp",
+  "founded": 2018,
+  "is_active": true,
+  "location": null,
+  "employees": [
+    {
+      "id": 1,
+      "name": "Prashant",
+      "age": 25,
+      "role": "developer",
+      "skills": ["python", "sql", "git"],
+      "salary": 30000
+    },
+    {
+      "id": 2,
+      "name": "Jayashree",
+      "age": 30,
+      "role": "hr",
+      "skills": ["recruiting", "communication"],
+      "salary": 20000
+    },
+    {
+      "id": 3,
+      "name": "Aman",
+      "age": 24,
+      "role": "developer",
+      "skills": ["javascript", "react"],
+      "salary": 28000
+    }
+  ],
+  "departments": {
+    "engineering": {
+      "head": "Prashant",
+      "headcount": 2
+    },
+    "hr": {
+      "head": "Jayashree",
+      "headcount": 1
+    }
+  }
+}

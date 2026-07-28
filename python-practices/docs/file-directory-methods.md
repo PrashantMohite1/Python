@@ -4,7 +4,29 @@ Summary of important Python methods for working with files and directories (`ope
 
 ---
 
-## 1. Opening files — `open()`
+## 1. Opening and closing files
+
+### Manual open / close
+
+```python
+file = open("example.txt", "r")  # open for reading
+content = file.read()
+file.close()  # always close when done
+```
+
+**The problem:** if an error happens between `open()` and `close()`, the file stays open.
+
+### Prefer `with` (auto-close)
+
+That's why you almost always use `with`:
+
+```python
+with open("example.txt", "r") as file:
+    content = file.read()
+# file is automatically closed here, even if an error occurs
+```
+
+### `open()` modes
 
 ```python
 file = open(path, mode='r', encoding='utf-8')
@@ -23,14 +45,6 @@ file = open(path, mode='r', encoding='utf-8')
 | `'t'` | Text | Default. Combine e.g. `'rt'` |
 
 **Path tip (Windows):** use raw string `r'C:\...'`, double slash `'C:\\...'`, or forward slash `'C:/...'` — a single `\` in a normal string is an escape (`\t` = tab).
-
-**Preferred style:**
-
-```python
-with open(path, 'r', encoding='utf-8') as f:
-    data = f.read()
-# file auto-closes after the block
-```
 
 ---
 
